@@ -1,17 +1,19 @@
----
 language: node_js
 node_js:
-  - "6"
-
+- '6'
 sudo: false
 dist: trusty
-
 addons:
   chrome: stable
-
 cache:
   directories:
-    - $HOME/.npm
-
+  - "$HOME/.npm"
 before_install:
-  - npm config set spin false
+- npm config set spin false
+deploy:
+  provider: heroku
+  api_key:
+    secure: NwaCj36swYK4x1Ekp4dWMigsOQnizsNFg59EKHIco4mw4xC+WyQL3HhapfSklirJKqYhMYrokX39/TLSe0m/CuAplZirX4rCVjbdpkhD4jPF0qu4M37t1lo4lwxp9lohWtYPT1qY4K7G9RQFsH8YqkbZHsri/nirqXj5S09rwBbUWF9xY1l/uI6XMwpbiLJ/JaiTqqzcftx7ld9VTUQUvHkF3LWCFM8huBqGBtBryu03DinG/cjXgvZqLzKbXODZ4q6h2n2+rE1nYeLcUETa9v3o1dtw3nFsW09E5IwybkZJAjKySbWlYraxn2U4Az0iuYvxnt4ec2eQCF8M3wZnbpy8elmjLzwa4PanBPtU7qL8SscPR3wAbRGFGe9v7nirB38ppwyl74z0bdjzpClKGHK3h0frp5TzgRVLewJBUb3FGi7PNPJPqABhIEOrJkxpL8W7hVrw+0HcJwEMuU8PJkuBZ+HQxZOwR6g1cHuX4DnCbUogtCjUb7AuDmmoIHyDhOJtmxgOCWMZR4m/H2LoWPgqStUCHlyHQfHT3u6081ARIbKZsPEMdIcaVngkUdjQYEzgJEVbtRanepAa732CRa5rnjWLyKozfCUx+n1i5H/p2qvro1pSGJfy2/jj/ZxFTEJseDFA1no43oKGngNIWv4bHF9RxkfcwHSzd66VyiQ=
+  app: glacial-fortress-69815
+  on:
+    repo: cdwlighting/peepchat
